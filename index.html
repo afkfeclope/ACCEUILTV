@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b13"><title>Accueil Smart TV</title>
+<style>
+:root{font-family:Inter,Arial,sans-serif;color:#f7f8fc;background:#080b13}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -20%,#243756 0%,#080b13 65%);padding:clamp(20px,5vw,76px)}header{display:flex;justify-content:space-between;align-items:start;margin-bottom:clamp(30px,6vh,72px)}h1{font-size:clamp(32px,5vw,68px);letter-spacing:-.05em;margin:0 0 10px}p{color:#a9b1c4;margin:0}#clock{font-size:clamp(20px,3vw,36px);font-weight:600;font-variant-numeric:tabular-nums}h2{font-size:18px;font-weight:500;color:#bfc8da;margin:0 0 20px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,24px)}a.tile{position:relative;min-height:clamp(140px,18vw,240px);border-radius:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:22px;text-decoration:none;color:white;box-shadow:0 12px 35px #0004;border:2px solid #ffffff12;transition:transform .2s,border-color .2s,box-shadow .2s}a.tile:hover,a.tile:focus-visible{transform:scale(1.055);z-index:1;border-color:white;box-shadow:0 20px 48px #0009;outline:0}.logo{font-weight:800;font-size:clamp(25px,3.8vw,48px);letter-spacing:-.05em;text-align:center}.name{font-size:clamp(13px,1.5vw,19px);font-weight:500;color:#ffffffd9}.netflix{background:linear-gradient(135deg,#350409,#111)}.netflix .logo{color:#e50914;font-size:70px}.disney{background:linear-gradient(135deg,#123e89,#07122c)}.prime{background:linear-gradient(135deg,#075682,#081f32)}.prime .logo{color:#76d8ff}.canal{background:linear-gradient(135deg,#373737,#050505)}.gpt{background:linear-gradient(135deg,#18796a,#07342e)}.gemini{background:linear-gradient(135deg,#473f9f,#142346)}.gmail{background:linear-gradient(135deg,#58302d,#201b20)}.github{background:linear-gradient(135deg,#3c445a,#121620)}footer{color:#79869c;margin-top:36px;font-size:13px}@media(max-width:780px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}a.tile{min-height:155px}header{gap:12px}.netflix .logo{font-size:54px}}@media(max-width:350px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div><h1>Bienvenue.</h1><p>Choisissez votre destination</p></div><div id="clock" aria-label="Heure actuelle"></div></header>
+<main><h2>Vos applications</h2><nav class="grid" aria-label="Applications">
+<a class="tile netflix" href="https://www.netflix.com/" aria-label="Ouvrir Netflix"><span class="logo">N</span><span class="name">Netflix</span></a>
+<a class="tile disney" href="https://www.disneyplus.com/" aria-label="Ouvrir Disney+"><span class="logo">Disney+</span><span class="name">Disney+</span></a>
+<a class="tile prime" href="https://www.primevideo.com/" aria-label="Ouvrir Prime Video"><span class="logo">prime</span><span class="name">Prime Video</span></a>
+<a class="tile canal" href="https://www.canalplus.com/" aria-label="Ouvrir Canal+"><span class="logo">CANAL+</span><span class="name">Canal+</span></a>
+<a class="tile gpt" href="https://chatgpt.com/" aria-label="Ouvrir ChatGPT"><span class="logo">✳</span><span class="name">ChatGPT</span></a>
+<a class="tile gemini" href="https://gemini.google.com/" aria-label="Ouvrir Gemini"><span class="logo">✦</span><span class="name">Gemini</span></a>
+<a class="tile gmail" href="https://mail.google.com/" aria-label="Ouvrir Gmail"><span class="logo">M</span><span class="name">Gmail</span></a>
+<a class="tile github" href="https://github.com/" aria-label="Ouvrir GitHub"><span class="logo">{ }</span><span class="name">GitHub</span></a>
+</nav></main><footer>Navigation possible à la souris, au clavier et par télécommande compatible.</footer>
+<script>function tick(){document.getElementById('clock').textContent=new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}tick();setInterval(tick,30000);</script>
+</body></html>
